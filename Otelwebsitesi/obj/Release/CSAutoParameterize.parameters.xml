@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data source=|DataDirectory|aspnet-Otelwebsitesi-20151213020828.sdf;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ömür\\Desktop\\Otelwebsitesi\\Otelwebsitesi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="webEntities-Web.config Connection String" description="webEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=FEVZI\MYSQL;initial catalog=web;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ömür\\Desktop\\Otelwebsitesi\\Otelwebsitesi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='webEntities']/@connectionString" />
+  </parameter>
+  <parameter name="webEntities1-Web.config Connection String" description="webEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model.csdl|res://*/Models.Model.ssdl|res://*/Models.Model.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=FEVZI\MYSQL;initial catalog=web;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ömür\\Desktop\\Otelwebsitesi\\Otelwebsitesi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='webEntities1']/@connectionString" />
+  </parameter>
+  <parameter name="webEntities2-Web.config Connection String" description="webEntities2 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.otel.csdl|res://*/Models.otel.ssdl|res://*/Models.otel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=FEVZI\MYSQL;initial catalog=web;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ömür\\Desktop\\Otelwebsitesi\\Otelwebsitesi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='webEntities2']/@connectionString" />
+  </parameter>
+  <parameter name="otelEntities-Web.config Connection String" description="otelEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=FEVZI\MYSQL;initial catalog=web;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ömür\\Desktop\\Otelwebsitesi\\Otelwebsitesi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='otelEntities']/@connectionString" />
+  </parameter>
+  <parameter name="OtelDBEntities-Web.config Connection String" description="OtelDBEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/OtelDB.csdl|res://*/OtelDB.ssdl|res://*/OtelDB.msl;provider=System.Data.SqlServerCe.4.0;provider connection string=&quot;Data Source=|DataDirectory|\OtelDB.sdf&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ömür\\Desktop\\Otelwebsitesi\\Otelwebsitesi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='OtelDBEntities']/@connectionString" />
+  </parameter>
+</parameters>

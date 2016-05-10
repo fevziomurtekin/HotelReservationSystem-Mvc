@@ -1,0 +1,43 @@
+﻿@model Otelwebsitesi.Models.salonlarimizdetay
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>salonlarimizdetay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.salondetayBilgi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salondetayBilgi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salonlar.salonResmi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salonlar.salonResmi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.salondetayID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

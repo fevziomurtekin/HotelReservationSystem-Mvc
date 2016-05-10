@@ -1,0 +1,89 @@
+﻿@model Otelwebsitesi.Models.odalarımız
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>odalarımız</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.odaTürü)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaTürü)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaKat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaKat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaBilgi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaBilgi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kalanOdasayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kalanOdasayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaÜcreti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaÜcreti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genelodadetayi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genelodadetayi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaResim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaResim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.basliklar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.basliklar)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

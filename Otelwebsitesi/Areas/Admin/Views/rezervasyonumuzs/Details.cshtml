@@ -1,0 +1,115 @@
+﻿@model Otelwebsitesi.Models.rezervasyonumuz
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>rezervasyonumuz</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.giristarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giristarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cikistarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cikistarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.yetiskinsayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.yetiskinsayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyadı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyadı)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonNumarasi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonNumarasi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eposta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eposta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresiniz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresiniz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaTürü)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaTürü)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaKat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaKat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odalarımız.odaTürü)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odalarımız.odaTürü)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uye.ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uye.ad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.rezervasyonID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

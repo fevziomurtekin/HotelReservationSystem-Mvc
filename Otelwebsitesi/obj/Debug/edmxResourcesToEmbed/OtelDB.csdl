@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OtelDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="OtelDBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="admin" EntityType="OtelDBModel.admin" />
+    <EntitySet Name="hakkimizda" EntityType="OtelDBModel.hakkimizda" />
+    <EntitySet Name="insankaynaklari" EntityType="OtelDBModel.insankaynaklari" />
+    <EntitySet Name="insankaynaklaridetay" EntityType="OtelDBModel.insankaynaklaridetay" />
+    <EntitySet Name="odalardetay" EntityType="OtelDBModel.odalardetay" />
+    <EntitySet Name="odalarımız" EntityType="OtelDBModel.odalarımız" />
+    <EntitySet Name="Restuarant" EntityType="OtelDBModel.Restuarant" />
+    <EntitySet Name="restuarantdetay" EntityType="OtelDBModel.restuarantdetay" />
+    <EntitySet Name="rezervasyonumuz" EntityType="OtelDBModel.rezervasyonumuz" />
+    <EntitySet Name="Salonlar" EntityType="OtelDBModel.Salonlar" />
+    <EntitySet Name="salonlarimizdetay" EntityType="OtelDBModel.salonlarimizdetay" />
+    <EntitySet Name="sliderbilgi" EntityType="OtelDBModel.sliderbilgi" />
+    <EntitySet Name="sysdiagrams" EntityType="OtelDBModel.sysdiagrams" />
+    <EntitySet Name="Uye" EntityType="OtelDBModel.Uye" />
+    <AssociationSet Name="FK_insankaynaklari_insankaynaklaridetay" Association="OtelDBModel.FK_insankaynaklari_insankaynaklaridetay">
+      <End Role="insankaynaklaridetay" EntitySet="insankaynaklaridetay" />
+      <End Role="insankaynaklari" EntitySet="insankaynaklari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_odalardetay_odalarımız" Association="OtelDBModel.FK_odalardetay_odalarımız">
+      <End Role="odalarımız" EntitySet="odalarımız" />
+      <End Role="odalardetay" EntitySet="odalardetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rezervasyonumuz_odalarımız" Association="OtelDBModel.FK_rezervasyonumuz_odalarımız">
+      <End Role="odalarımız" EntitySet="odalarımız" />
+      <End Role="rezervasyonumuz" EntitySet="rezervasyonumuz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_restuarantdetay_Restuarant1" Association="OtelDBModel.FK_restuarantdetay_Restuarant1">
+      <End Role="Restuarant" EntitySet="Restuarant" />
+      <End Role="restuarantdetay" EntitySet="restuarantdetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rezervasyonumuz_Uye" Association="OtelDBModel.FK_rezervasyonumuz_Uye">
+      <End Role="Uye" EntitySet="Uye" />
+      <End Role="rezervasyonumuz" EntitySet="rezervasyonumuz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_salonlarimizdetay_Salonlar" Association="OtelDBModel.FK_salonlarimizdetay_Salonlar">
+      <End Role="Salonlar" EntitySet="Salonlar" />
+      <End Role="salonlarimizdetay" EntitySet="salonlarimizdetay" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="soyadi" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="k_adi" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="sifre" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="hakkimizda">
+    <Key>
+      <PropertyRef Name="hakkimizdaID" />
+    </Key>
+    <Property Name="hakkimizdaID" Type="Int32" Nullable="false" />
+    <Property Name="hakkimizdaBilgi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaResim" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBaslik" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdasatir1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdasatir2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdasatir3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdasatir4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdasatir5" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdasatir6" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdasatir7" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdasatir8" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdasatir9" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBaslik1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBilgi1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBilgi2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBaslik2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBaslik3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBilgi3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBaslik4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBilgi4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBaslik5" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hakkimizdaBilgi5" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="insankaynaklari">
+    <Key>
+      <PropertyRef Name="ikID" />
+    </Key>
+    <Property Name="ikID" Type="Int32" Nullable="false" />
+    <Property Name="ikResim" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBaslik" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBaslik1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBaslik3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ikBaslik4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi5" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi6" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi7" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi8" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ikBilgi9" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="insankaynaklaridetay" Relationship="OtelDBModel.FK_insankaynaklari_insankaynaklaridetay" FromRole="insankaynaklari" ToRole="insankaynaklaridetay" />
+  </EntityType>
+  <EntityType Name="insankaynaklaridetay">
+    <Key>
+      <PropertyRef Name="ikdetayID" />
+    </Key>
+    <Property Name="ikdetayID" Type="Int32" Nullable="false" />
+    <Property Name="ikdetayBilgi" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="dil" Type="Int32" Nullable="false" />
+    <Property Name="ikID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="insankaynaklari" Relationship="OtelDBModel.FK_insankaynaklari_insankaynaklaridetay" FromRole="insankaynaklaridetay" ToRole="insankaynaklari" />
+  </EntityType>
+  <EntityType Name="odalardetay">
+    <Key>
+      <PropertyRef Name="odalardetayID" />
+    </Key>
+    <Property Name="odalardetayID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="odalardetayBilgi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="dil" Type="Int32" />
+    <Property Name="odalarID" Type="Int32" />
+    <NavigationProperty Name="odalarımız" Relationship="OtelDBModel.FK_odalardetay_odalarımız" FromRole="odalardetay" ToRole="odalarımız" />
+  </EntityType>
+  <EntityType Name="odalarımız">
+    <Key>
+      <PropertyRef Name="odalarID" />
+    </Key>
+    <Property Name="odalarID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="odaTürü" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="odaKat" Type="Int32" />
+    <Property Name="odaBilgi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="kalanOdasayisi" Type="Int32" />
+    <Property Name="odaÜcreti" Type="Int32" />
+    <Property Name="genelodadetayi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="odaResim" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="basliklar" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="odalardetay" Relationship="OtelDBModel.FK_odalardetay_odalarımız" FromRole="odalarımız" ToRole="odalardetay" />
+    <NavigationProperty Name="rezervasyonumuz" Relationship="OtelDBModel.FK_rezervasyonumuz_odalarımız" FromRole="odalarımız" ToRole="rezervasyonumuz" />
+  </EntityType>
+  <EntityType Name="Restuarant">
+    <Key>
+      <PropertyRef Name="restuarantID" />
+    </Key>
+    <Property Name="restuarantID" Type="Int32" Nullable="false" />
+    <Property Name="restuarantResim" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="restuarantBilgi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="resim2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="resim3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="resim4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="resim5" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="resim6" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="restuarantdetay" Relationship="OtelDBModel.FK_restuarantdetay_Restuarant1" FromRole="Restuarant" ToRole="restuarantdetay" />
+  </EntityType>
+  <EntityType Name="restuarantdetay">
+    <Key>
+      <PropertyRef Name="restuarantdetayID" />
+    </Key>
+    <Property Name="restuarantdetayID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="restuaranddetayBilgi" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="dil" Type="Int32" Nullable="false" />
+    <Property Name="restuarantID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Restuarant" Relationship="OtelDBModel.FK_restuarantdetay_Restuarant1" FromRole="restuarantdetay" ToRole="Restuarant" />
+  </EntityType>
+  <EntityType Name="rezervasyonumuz">
+    <Key>
+      <PropertyRef Name="rezervasyonID" />
+    </Key>
+    <Property Name="rezervasyonID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="giristarihi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="cikistarihi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="yetiskinsayisi" Type="Int32" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Soyadı" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TelefonNumarasi" Type="Int32" />
+    <Property Name="Eposta" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Adresiniz" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="odalarID" Type="Int32" />
+    <Property Name="uyeID" Type="Int32" />
+    <Property Name="odaTürü" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="odaKat" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="odalarımız" Relationship="OtelDBModel.FK_rezervasyonumuz_odalarımız" FromRole="rezervasyonumuz" ToRole="odalarımız" />
+    <NavigationProperty Name="Uye" Relationship="OtelDBModel.FK_rezervasyonumuz_Uye" FromRole="rezervasyonumuz" ToRole="Uye" />
+  </EntityType>
+  <EntityType Name="Salonlar">
+    <Key>
+      <PropertyRef Name="salonlarID" />
+    </Key>
+    <Property Name="salonlarID" Type="Int32" Nullable="false" />
+    <Property Name="salonResmi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="salonBilgi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="salonBaslik" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="salonbilgisatiri1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="salonbilgisatiri2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="salonbilgisatiri3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="salonbilgisatiri4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="salonlarimizdetay" Relationship="OtelDBModel.FK_salonlarimizdetay_Salonlar" FromRole="Salonlar" ToRole="salonlarimizdetay" />
+  </EntityType>
+  <EntityType Name="salonlarimizdetay">
+    <Key>
+      <PropertyRef Name="salondetayID" />
+    </Key>
+    <Property Name="salondetayID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="salondetayBilgi" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="dil" Type="Int32" Nullable="false" />
+    <Property Name="salonlarID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Salonlar" Relationship="OtelDBModel.FK_salonlarimizdetay_Salonlar" FromRole="salonlarimizdetay" ToRole="Salonlar" />
+  </EntityType>
+  <EntityType Name="sliderbilgi">
+    <Key>
+      <PropertyRef Name="sliderbilgiID" />
+    </Key>
+    <Property Name="sliderbilgiID" Type="Int32" Nullable="false" />
+    <Property Name="sliderfoto1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="sliderfoto2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="sliderfoto3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="sliderfoto4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="slidertext1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="slidertext2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="slidertext3" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="slidertext4" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="kategori" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Uye">
+    <Key>
+      <PropertyRef Name="uyeID" />
+    </Key>
+    <Property Name="uyeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="soyadi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="sifre" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AdminMi" Type="Int32" />
+    <NavigationProperty Name="rezervasyonumuz" Relationship="OtelDBModel.FK_rezervasyonumuz_Uye" FromRole="Uye" ToRole="rezervasyonumuz" />
+  </EntityType>
+  <Association Name="FK_insankaynaklari_insankaynaklaridetay">
+    <End Role="insankaynaklaridetay" Type="OtelDBModel.insankaynaklaridetay" Multiplicity="1" />
+    <End Role="insankaynaklari" Type="OtelDBModel.insankaynaklari" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="insankaynaklaridetay">
+        <PropertyRef Name="ikdetayID" />
+      </Principal>
+      <Dependent Role="insankaynaklari">
+        <PropertyRef Name="ikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_odalardetay_odalarımız">
+    <End Role="odalarımız" Type="OtelDBModel.odalarımız" Multiplicity="0..1" />
+    <End Role="odalardetay" Type="OtelDBModel.odalardetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="odalarımız">
+        <PropertyRef Name="odalarID" />
+      </Principal>
+      <Dependent Role="odalardetay">
+        <PropertyRef Name="odalarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rezervasyonumuz_odalarımız">
+    <End Role="odalarımız" Type="OtelDBModel.odalarımız" Multiplicity="0..1" />
+    <End Role="rezervasyonumuz" Type="OtelDBModel.rezervasyonumuz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="odalarımız">
+        <PropertyRef Name="odalarID" />
+      </Principal>
+      <Dependent Role="rezervasyonumuz">
+        <PropertyRef Name="odalarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_restuarantdetay_Restuarant1">
+    <End Role="Restuarant" Type="OtelDBModel.Restuarant" Multiplicity="1" />
+    <End Role="restuarantdetay" Type="OtelDBModel.restuarantdetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restuarant">
+        <PropertyRef Name="restuarantID" />
+      </Principal>
+      <Dependent Role="restuarantdetay">
+        <PropertyRef Name="restuarantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rezervasyonumuz_Uye">
+    <End Role="Uye" Type="OtelDBModel.Uye" Multiplicity="0..1" />
+    <End Role="rezervasyonumuz" Type="OtelDBModel.rezervasyonumuz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uye">
+        <PropertyRef Name="uyeID" />
+      </Principal>
+      <Dependent Role="rezervasyonumuz">
+        <PropertyRef Name="uyeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_salonlarimizdetay_Salonlar">
+    <End Role="Salonlar" Type="OtelDBModel.Salonlar" Multiplicity="1" />
+    <End Role="salonlarimizdetay" Type="OtelDBModel.salonlarimizdetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salonlar">
+        <PropertyRef Name="salonlarID" />
+      </Principal>
+      <Dependent Role="salonlarimizdetay">
+        <PropertyRef Name="salonlarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

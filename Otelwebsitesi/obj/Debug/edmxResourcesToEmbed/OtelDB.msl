@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OtelDBModelStoreContainer" CdmEntityContainer="OtelDBEntities">
+    <EntitySetMapping Name="admin">
+      <EntityTypeMapping TypeName="OtelDBModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="adminID" ColumnName="adminID" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="k_adi" ColumnName="k_adi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hakkimizda">
+      <EntityTypeMapping TypeName="OtelDBModel.hakkimizda">
+        <MappingFragment StoreEntitySet="hakkimizda">
+          <ScalarProperty Name="hakkimizdaID" ColumnName="hakkimizdaID" />
+          <ScalarProperty Name="hakkimizdaBilgi" ColumnName="hakkimizdaBilgi" />
+          <ScalarProperty Name="hakkimizdaResim" ColumnName="hakkimizdaResim" />
+          <ScalarProperty Name="hakkimizdaBaslik" ColumnName="hakkimizdaBaslik" />
+          <ScalarProperty Name="hakkimizdasatir1" ColumnName="hakkimizdasatir1" />
+          <ScalarProperty Name="hakkimizdasatir2" ColumnName="hakkimizdasatir2" />
+          <ScalarProperty Name="hakkimizdasatir3" ColumnName="hakkimizdasatir3" />
+          <ScalarProperty Name="hakkimizdasatir4" ColumnName="hakkimizdasatir4" />
+          <ScalarProperty Name="hakkimizdasatir5" ColumnName="hakkimizdasatir5" />
+          <ScalarProperty Name="hakkimizdasatir6" ColumnName="hakkimizdasatir6" />
+          <ScalarProperty Name="hakkimizdasatir7" ColumnName="hakkimizdasatir7" />
+          <ScalarProperty Name="hakkimizdasatir8" ColumnName="hakkimizdasatir8" />
+          <ScalarProperty Name="hakkimizdasatir9" ColumnName="hakkimizdasatir9" />
+          <ScalarProperty Name="hakkimizdaBaslik1" ColumnName="hakkimizdaBaslik1" />
+          <ScalarProperty Name="hakkimizdaBilgi1" ColumnName="hakkimizdaBilgi1" />
+          <ScalarProperty Name="hakkimizdaBilgi2" ColumnName="hakkimizdaBilgi2" />
+          <ScalarProperty Name="hakkimizdaBaslik2" ColumnName="hakkimizdaBaslik2" />
+          <ScalarProperty Name="hakkimizdaBaslik3" ColumnName="hakkimizdaBaslik3" />
+          <ScalarProperty Name="hakkimizdaBilgi3" ColumnName="hakkimizdaBilgi3" />
+          <ScalarProperty Name="hakkimizdaBaslik4" ColumnName="hakkimizdaBaslik4" />
+          <ScalarProperty Name="hakkimizdaBilgi4" ColumnName="hakkimizdaBilgi4" />
+          <ScalarProperty Name="hakkimizdaBaslik5" ColumnName="hakkimizdaBaslik5" />
+          <ScalarProperty Name="hakkimizdaBilgi5" ColumnName="hakkimizdaBilgi5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insankaynaklari">
+      <EntityTypeMapping TypeName="OtelDBModel.insankaynaklari">
+        <MappingFragment StoreEntitySet="insankaynaklari">
+          <ScalarProperty Name="ikID" ColumnName="ikID" />
+          <ScalarProperty Name="ikResim" ColumnName="ikResim" />
+          <ScalarProperty Name="ikBaslik" ColumnName="ikBaslik" />
+          <ScalarProperty Name="ikBaslik1" ColumnName="ikBaslik1" />
+          <ScalarProperty Name="ikBaslik3" ColumnName="ikBaslik3" />
+          <ScalarProperty Name="ikBaslik4" ColumnName="ikBaslik4" />
+          <ScalarProperty Name="ikBilgi" ColumnName="ikBilgi" />
+          <ScalarProperty Name="ikBilgi1" ColumnName="ikBilgi1" />
+          <ScalarProperty Name="ikBilgi2" ColumnName="ikBilgi2" />
+          <ScalarProperty Name="ikBilgi3" ColumnName="ikBilgi3" />
+          <ScalarProperty Name="ikBilgi4" ColumnName="ikBilgi4" />
+          <ScalarProperty Name="ikBilgi5" ColumnName="ikBilgi5" />
+          <ScalarProperty Name="ikBilgi6" ColumnName="ikBilgi6" />
+          <ScalarProperty Name="ikBilgi7" ColumnName="ikBilgi7" />
+          <ScalarProperty Name="ikBilgi8" ColumnName="ikBilgi8" />
+          <ScalarProperty Name="ikBilgi9" ColumnName="ikBilgi9" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insankaynaklaridetay">
+      <EntityTypeMapping TypeName="OtelDBModel.insankaynaklaridetay">
+        <MappingFragment StoreEntitySet="insankaynaklaridetay">
+          <ScalarProperty Name="ikdetayID" ColumnName="ikdetayID" />
+          <ScalarProperty Name="ikdetayBilgi" ColumnName="ikdetayBilgi" />
+          <ScalarProperty Name="dil" ColumnName="dil" />
+          <ScalarProperty Name="ikID" ColumnName="ikID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="odalardetay">
+      <EntityTypeMapping TypeName="OtelDBModel.odalardetay">
+        <MappingFragment StoreEntitySet="odalardetay">
+          <ScalarProperty Name="odalardetayID" ColumnName="odalardetayID" />
+          <ScalarProperty Name="odalardetayBilgi" ColumnName="odalardetayBilgi" />
+          <ScalarProperty Name="dil" ColumnName="dil" />
+          <ScalarProperty Name="odalarID" ColumnName="odalarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="odalarımız">
+      <EntityTypeMapping TypeName="OtelDBModel.odalarımız">
+        <MappingFragment StoreEntitySet="odalarımız">
+          <ScalarProperty Name="odalarID" ColumnName="odalarID" />
+          <ScalarProperty Name="odaTürü" ColumnName="odaTürü" />
+          <ScalarProperty Name="odaKat" ColumnName="odaKat" />
+          <ScalarProperty Name="odaBilgi" ColumnName="odaBilgi" />
+          <ScalarProperty Name="kalanOdasayisi" ColumnName="kalanOdasayisi" />
+          <ScalarProperty Name="odaÜcreti" ColumnName="odaÜcreti" />
+          <ScalarProperty Name="genelodadetayi" ColumnName="genelodadetayi" />
+          <ScalarProperty Name="odaResim" ColumnName="odaResim" />
+          <ScalarProperty Name="basliklar" ColumnName="basliklar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restuarant">
+      <EntityTypeMapping TypeName="OtelDBModel.Restuarant">
+        <MappingFragment StoreEntitySet="Restuarant">
+          <ScalarProperty Name="restuarantID" ColumnName="restuarantID" />
+          <ScalarProperty Name="restuarantResim" ColumnName="restuarantResim" />
+          <ScalarProperty Name="restuarantBilgi" ColumnName="restuarantBilgi" />
+          <ScalarProperty Name="resim2" ColumnName="resim2" />
+          <ScalarProperty Name="resim3" ColumnName="resim3" />
+          <ScalarProperty Name="resim4" ColumnName="resim4" />
+          <ScalarProperty Name="resim5" ColumnName="resim5" />
+          <ScalarProperty Name="resim6" ColumnName="resim6" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="restuarantdetay">
+      <EntityTypeMapping TypeName="OtelDBModel.restuarantdetay">
+        <MappingFragment StoreEntitySet="restuarantdetay">
+          <ScalarProperty Name="restuarantdetayID" ColumnName="restuarantdetayID" />
+          <ScalarProperty Name="restuaranddetayBilgi" ColumnName="restuaranddetayBilgi" />
+          <ScalarProperty Name="dil" ColumnName="dil" />
+          <ScalarProperty Name="restuarantID" ColumnName="restuarantID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rezervasyonumuz">
+      <EntityTypeMapping TypeName="OtelDBModel.rezervasyonumuz">
+        <MappingFragment StoreEntitySet="rezervasyonumuz">
+          <ScalarProperty Name="rezervasyonID" ColumnName="rezervasyonID" />
+          <ScalarProperty Name="giristarihi" ColumnName="giristarihi" />
+          <ScalarProperty Name="cikistarihi" ColumnName="cikistarihi" />
+          <ScalarProperty Name="yetiskinsayisi" ColumnName="yetiskinsayisi" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyadı" ColumnName="Soyadı" />
+          <ScalarProperty Name="TelefonNumarasi" ColumnName="TelefonNumarasi" />
+          <ScalarProperty Name="Eposta" ColumnName="Eposta" />
+          <ScalarProperty Name="Adresiniz" ColumnName="Adresiniz" />
+          <ScalarProperty Name="odalarID" ColumnName="odalarID" />
+          <ScalarProperty Name="uyeID" ColumnName="uyeID" />
+          <ScalarProperty Name="odaTürü" ColumnName="odaTürü" />
+          <ScalarProperty Name="odaKat" ColumnName="odaKat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salonlar">
+      <EntityTypeMapping TypeName="OtelDBModel.Salonlar">
+        <MappingFragment StoreEntitySet="Salonlar">
+          <ScalarProperty Name="salonlarID" ColumnName="salonlarID" />
+          <ScalarProperty Name="salonResmi" ColumnName="salonResmi" />
+          <ScalarProperty Name="salonBilgi" ColumnName="salonBilgi" />
+          <ScalarProperty Name="salonBaslik" ColumnName="salonBaslik" />
+          <ScalarProperty Name="salonbilgisatiri1" ColumnName="salonbilgisatiri1" />
+          <ScalarProperty Name="salonbilgisatiri2" ColumnName="salonbilgisatiri2" />
+          <ScalarProperty Name="salonbilgisatiri3" ColumnName="salonbilgisatiri3" />
+          <ScalarProperty Name="salonbilgisatiri4" ColumnName="salonbilgisatiri4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salonlarimizdetay">
+      <EntityTypeMapping TypeName="OtelDBModel.salonlarimizdetay">
+        <MappingFragment StoreEntitySet="salonlarimizdetay">
+          <ScalarProperty Name="salondetayID" ColumnName="salondetayID" />
+          <ScalarProperty Name="salondetayBilgi" ColumnName="salondetayBilgi" />
+          <ScalarProperty Name="dil" ColumnName="dil" />
+          <ScalarProperty Name="salonlarID" ColumnName="salonlarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sliderbilgi">
+      <EntityTypeMapping TypeName="OtelDBModel.sliderbilgi">
+        <MappingFragment StoreEntitySet="sliderbilgi">
+          <ScalarProperty Name="sliderbilgiID" ColumnName="sliderbilgiID" />
+          <ScalarProperty Name="sliderfoto1" ColumnName="sliderfoto1" />
+          <ScalarProperty Name="sliderfoto2" ColumnName="sliderfoto2" />
+          <ScalarProperty Name="sliderfoto3" ColumnName="sliderfoto3" />
+          <ScalarProperty Name="sliderfoto4" ColumnName="sliderfoto4" />
+          <ScalarProperty Name="slidertext1" ColumnName="slidertext1" />
+          <ScalarProperty Name="slidertext2" ColumnName="slidertext2" />
+          <ScalarProperty Name="slidertext3" ColumnName="slidertext3" />
+          <ScalarProperty Name="slidertext4" ColumnName="slidertext4" />
+          <ScalarProperty Name="kategori" ColumnName="kategori" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="OtelDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uye">
+      <EntityTypeMapping TypeName="OtelDBModel.Uye">
+        <MappingFragment StoreEntitySet="Uye">
+          <ScalarProperty Name="uyeID" ColumnName="uyeID" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="AdminMi" ColumnName="AdminMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

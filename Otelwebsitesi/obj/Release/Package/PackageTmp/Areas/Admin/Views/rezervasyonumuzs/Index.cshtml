@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Otelwebsitesi.Models.rezervasyonumuz>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.giristarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cikistarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.yetiskinsayisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyadı)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonNumarasi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Eposta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresiniz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.odaTürü)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.odaKat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.odalarımız.odaTürü)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Uye.ad)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.giristarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cikistarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.yetiskinsayisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Soyadı)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonNumarasi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eposta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adresiniz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.odaTürü)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.odaKat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.odalarımız.odaTürü)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uye.ad)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.rezervasyonID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.rezervasyonID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.rezervasyonID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,49 @@
+﻿@model Otelwebsitesi.Models.odalardetay
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>odalardetay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.odalardetayBilgi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odalardetayBilgi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odalarımız.odaTürü)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odalarımız.odaTürü)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

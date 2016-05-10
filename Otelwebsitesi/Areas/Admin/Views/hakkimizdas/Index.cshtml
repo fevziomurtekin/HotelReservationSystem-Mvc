@@ -1,0 +1,160 @@
+﻿@model IEnumerable<Otelwebsitesi.Models.hakkimizda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBilgi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaResim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBaslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdasatir1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdasatir2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdasatir3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdasatir4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdasatir5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdasatir6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdasatir7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdasatir8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdasatir9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBaslik1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBilgi1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBilgi2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBaslik2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBaslik3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBilgi3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBaslik4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBilgi4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBaslik5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hakkimizdaBilgi5)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBilgi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaResim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBaslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdasatir1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdasatir2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdasatir3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdasatir4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdasatir5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdasatir6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdasatir7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdasatir8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdasatir9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBaslik1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBilgi1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBilgi2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBaslik2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBaslik3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBilgi3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBaslik4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBilgi4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBaslik5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hakkimizdaBilgi5)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.hakkimizdaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.hakkimizdaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.hakkimizdaID })
+        </td>
+    </tr>
+}
+
+</table>

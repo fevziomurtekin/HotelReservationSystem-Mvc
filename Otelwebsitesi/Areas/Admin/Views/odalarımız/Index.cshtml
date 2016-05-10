@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Otelwebsitesi.Models.odalarımız>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.odaTürü)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.odaKat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.odaBilgi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kalanOdasayisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.odaÜcreti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genelodadetayi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.odaResim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.basliklar)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.odaTürü)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.odaKat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.odaBilgi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kalanOdasayisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.odaÜcreti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genelodadetayi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.odaResim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.basliklar)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.odalarID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.odalarID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.odalarID })
+        </td>
+    </tr>
+}
+
+</table>

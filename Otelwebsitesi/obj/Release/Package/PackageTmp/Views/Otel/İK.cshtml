@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "İK";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+     
+<div class="IK">
+    <br />
+  
+    <div class="booking-main">
+        <h3>İnsan Kaynakları</h3>
+    </div>
+    <br />
+    <div id="textContainer">
+        <div class="tools">
+         
+        </div>
+     @foreach (var ıtem in ViewBag.ik)
+     {
+
+        <div class="lister">
+            @if (ıtem.ikID== 1)
+            {
+            <div class="tanim"><h2>@ıtem.ikBaslik</h2>
+            <p>@ıtem.ikBilgi</p>
+            <ul>
+                <li>@ıtem.ikBilgi1</li>
+                <li>@ıtem.ikBilgi2</li>
+                <li>@ıtem.ikBilgi3</li>
+                <li>@ıtem.ikBilgi4</li>
+                <li>@ıtem.ikBilgi5</li>
+                <li>@ıtem.ikBilgi6</li>
+                <li>@ıtem.ikBilgi7</li>
+
+            </ul>
+            </div>
+            }
+
+            <h3>@ıtem.ikBaslik</h3>
+            @if (ıtem.ikID == 2) { 
+            <dl class="accordion">
+                <dt><a href="javascript:;" title="Komi">@ıtem.ikBaslik1</a></dt>
+                <dd>
+                    <p>@ıtem.ikBilgi</p>
+                    <ul>
+                        <li>@ıtem.ikBilgi1</li>
+                        <li>@ıtem.ikBilgi2</li>
+                        <li>@ıtem.ikBilgi3</li>
+                        <li>@ıtem.ikBilgi4</li>
+                        <li>@ıtem.ikBilgi5</li>
+                        <li>@ıtem.ikBilgi6</li>
+                        <li>@ıtem.ikBilgi7</li>
+                        <li>@ıtem.ikBilgi8</li>
+                  
+                        
+                    </ul>
+                </dd>
+   
+                <dt><a href="javascript:;" title="Garson">@ıtem.ikBaslik3</a></dt>
+                <dd>
+                    <p>@ıtem.ikBilgi</p>
+                    <ul>
+                        <li>@ıtem.ikBilgi1</li>
+                       
+                        <li>@ıtem.ikBilgi3</li>
+                        <li>@ıtem.ikBilgi4</li>
+                        <li>@ıtem.ikBilgi5</li>
+                        <li>@ıtem.ikBilgi6</li>
+                        <li>@ıtem.ikBilgi7</li>
+                        <li>@ıtem.ikBilgi8</li>
+                        <li>@ıtem.ikBilgi9</li>
+                    </ul>
+                </dd>
+            </dl>
+            }
+        </div>
+         }
+         <br />
+        <p> Eğer yukarıdaki kriterler sizede uygunsa ve bizle çalışmak istiyorsanız. E-mail yoluyla iş başvurusunda bulunabilirsiniz.</p><br />
+           <a href="mailto:youremailaddress"><strong>mutluhotel@gmail.com</strong></a>  
+
+                    </div>
+                </div>
+

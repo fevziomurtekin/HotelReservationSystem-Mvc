@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8e6b3b83a4354b03a5cafabdc7c048f8" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="webModel.admin" Width="1.5" PointX="10.75" PointY="2.125" />
+        <EntityTypeShape EntityType="webModel.hakkimizda" Width="1.5" PointX="10.75" PointY="5.125" />
+        <EntityTypeShape EntityType="webModel.insankaynaklari" Width="1.5" PointX="8" PointY="10.375" />
+        <EntityTypeShape EntityType="webModel.insankaynaklaridetay" Width="1.5" PointX="5.75" PointY="11.5" />
+        <EntityTypeShape EntityType="webModel.odalardetay" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="webModel.odalarımız" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="webModel.Restuarant" Width="1.5" PointX="5.75" PointY="6.375" />
+        <EntityTypeShape EntityType="webModel.restuarantdetay" Width="1.5" PointX="8" PointY="6.75" />
+        <EntityTypeShape EntityType="webModel.rezervasyonumuz" Width="1.5" PointX="3" PointY="3.875" />
+        <EntityTypeShape EntityType="webModel.Salonlar" Width="1.5" PointX="5.75" PointY="2.375" />
+        <EntityTypeShape EntityType="webModel.salonlarimizdetay" Width="1.5" PointX="8" PointY="2.75" />
+        <EntityTypeShape EntityType="webModel.sliderbilgi" Width="1.5" PointX="10.75" PointY="12.125" />
+        <EntityTypeShape EntityType="webModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="13.125" />
+        <EntityTypeShape EntityType="webModel.Uye" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="webModel.FK_insankaynaklari_insankaynaklaridetay" />
+        <AssociationConnector Association="webModel.FK_odalardetay_odalarımız" />
+        <AssociationConnector Association="webModel.FK_rezervasyonumuz_odalarımız" />
+        <AssociationConnector Association="webModel.FK_restuarantdetay_Restuarant1" />
+        <AssociationConnector Association="webModel.FK_rezervasyonumuz_Uye" />
+        <AssociationConnector Association="webModel.FK_salonlarimizdetay_Salonlar" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    <title>Blue Water a Hotel Category Flat Bootstrap Responsive Web Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Blue Water Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/Content/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/Content/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="~/Content/css/web.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.11.0.min.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="~/Scripts/move-top.js"></script>
+    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+    </script>
+    <!--start-smoth-scrolling-->
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="100">
+    <!--start-banner-->
+    <div class="header navbar-static-top">
+        <div class="top-header">
+            <div class="banner1" id="home">
+                <div class="log-in">
+                    <ul>
+                        <li>@Html.Partial("_LoginPartial")</li>
+                        
+                        @*<li><a class="play-icon popup-with-zoom-anim" href="/Account/Login"><span> </span>Giriş</a></li>*@
+                        <li><a class="play-icon popup-with-zoom-anim" href="/Account/Register">Kayıt ol</a></li>
+                    </ul>
+                </div>
+                <div class="banner-bottom">
+                    <a href="/Home/Index"><img src="~/Content/images/logo-1.png" alt=""></a>
+                    <h1>MUTLU <span> HOTEL</span></h1>
+                </div>
+
+                <div class="container ">
+                    <div class="header">
+                        <div class="menu" id="myScrollspy">
+                            <a class="toggleMenu" href="#"><img src="~/Content/images/menu-icon.png" alt="" /> </a>
+                            <ul class="nav" id="nav">
+
+                                <li data-spy="scroll">@Html.ActionLink("Anasayfa", "Index", "Home")</li>
+                                <li data-spy="scroll">@Html.ActionLink("Hakkımızda", "Hakkımızda", "Otel")</li>
+                                <li data-spy="scroll">@Html.ActionLink("Odalarımız", "Odalarımız", "Otel")</li>
+                                <li data-spy="scroll">@Html.ActionLink("Rezervasyon", "Rezervasyon", "Otel")</li>
+                                <li data-spy="scroll">@Html.ActionLink("Salonlarımız", "Salonlarımız", "Otel")</li>
+                                <li data-spy="scroll">@Html.ActionLink("Restuarant&Bar", "ResBar", "Otel")</li>
+                                <li data-spy="scroll">@Html.ActionLink("İnsan Kaynakları", "İK", "Otel")</li>
+                                <li data-spy="scroll">@Html.ActionLink("İletişim", "İletisim", "Otel")</li>
+                            </ul>
+                            <!----start-top-nav-script---->
+                            <script type="text/javascript" src="~/Scripts/responsive-nav.js"></script>
+                            <script type="text/javascript">
+                                jQuery(document).ready(function ($) {
+                                    $(".scroll").click(function (event) {
+                                        event.preventDefault();
+                                        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+                                    });
+                                });
+                            </script>
+                            <!----//End-top-nav-script---->
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+    <hr />
+    <div class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="col-md-5 footer-left">
+                    <h4>Bizi takip edin</h4>
+                    <ul>
+                        <li><a href="#"><span class="twt"> </span></a></li>
+                        <li><a href="#"><span class="fb"> </span></a></li>
+                        <li><a href="#"><span class="p"> </span></a></li>
+                        <li><a href="#"><span class="yt"> </span></a></li>
+                        <li><a href="#"><span class="in"> </span></a></li>
+                    </ul>
+                    <h4>Adres</h4>
+                    <h5>capetown,Georgia, Lipsum street, New york.</h5>
+                    <p>Mail adresimiz <a href="mailto:info@example.com"> 123example@gmail.com</a></p>
+                    <p>Telefon numaramız  +00 0111 011 111</p>
+                </div>
+                <div class="col-md-7 footer-right">
+                    <h4>Güncellemeler için abone ol</h4>
+                    <span>
+                        <form>
+                            <input type="text" value="Enter email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter email';}">
+                            <input type="submit" value="SUBSCRIBE">
+                        </form>
+                    </span>
+                    <ul>
+                        <h4>Kısayollar</h4>
+                        <li>@Html.ActionLink("Hakkımızda", "Hakkımızda", "Otel")</li>
+                        <li>@Html.ActionLink("Odalarımız", "Odalarımız", "Otel")</li>
+                        <li>@Html.ActionLink("Rezervasyon", "Rezervasyon", "Otel")</li>
+                        <li>@Html.ActionLink("Salonlarımız", "Salonlarımız", "Otel")</li>
+                        <li>@Html.ActionLink("Kampanyalar", "kampanya", "Otel")</li>
+                        <li>@Html.ActionLink("Restuarant&Bar", "ResBar", "Otel")</li>
+                        <li>@Html.ActionLink("İnsan Kaynakları", "İK", "Otel")</li>
+                        <li>@Html.ActionLink("İletişim", "İletisim", "Otel")</li>
+                        <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog">Login</a></li>
+                        <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog1">Sign up</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="footer-text">
+                <p> &copy; 2015 Blue Water. All Rights Reserved | Design by  <a href="http://w3layouts.com">  W3layouts</a></p>
+            </div>
+        </div>
+        <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

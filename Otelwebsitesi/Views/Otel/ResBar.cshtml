@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "ResBar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="banner-bottom">
+    <a href="/Home/Index"><img src="~/Content/images/logo-1.png" alt=""></a>
+    <div class="booking-main">
+        <h3>Resturant&Bar</h3></div>
+    </div>
+@foreach (var item in ViewBag.Restuarant)
+{
+    
+<div class="opbanner1" style="padding: 0;">
+    <div class="mainCont" style="padding: 25px 0;">
+        <div class="mainContainer">
+
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <br>
+                            <div class="container">
+                               <strong>@item.restuarantBilgi</strong> 
+                                </div>
+
+
+                                <br />
+
+</td>
+                    </tr>
+            </table>
+           
+          @if (item.restuarantID == 1) { 
+            <div class="container tab-content">  
+                <h2>Restuarant&Bar</h2>
+
+                <div class="row photos">
+                   <a class="fancybox col-xs-12 col-sm-6 col-md-4 col-lg-4" href="" data-fancybox-group="gallery" title="Restuarant&Bar"><img src="~/Content/@item.restuarantResim" title="Restuarant&Bar"  class="resimler" /></a>
+                    <a class="fancybox col-xs-12 col-sm-6 col-md-4 col-lg-4" href="" data-fancybox-group="gallery" title="Restuarant&Bar"><img src="~/Content/@item.resim2" title="Restuarant&Bar"  class="resimler" /></a>
+                    <a class="fancybox col-xs-12 col-sm-6 col-md-4 col-lg-4" href="" data-fancybox-group="gallery" title="Restuarant&Bar"><img src="~/Content/@item.resim3 " title="Restuarant&Bar" class="resimler" /></a>
+                    <a class="fancybox col-xs-12 col-sm-6 col-md-4 col-lg-4" href="" data-fancybox-group="gallery" title="Restuarant&Bar"><img src="~/Content/@item.resim4" title="Restuarant&Bar" class="resimler"  /></a>
+                    <a class="fancybox col-xs-12 col-sm-6 col-md-4 col-lg-4" href="" data-fancybox-group="gallery" title="Restuarant&Bar"><img src="~/Content/@item.resim5" title="Restuarant&Bar" class="resimler" /></a>
+                    <a class="fancybox col-xs-12 col-sm-6 col-md-4 col-lg-4" href="" data-fancybox-group="gallery" title="Restuarant&Bar"><img src="~/Content/@item.resim6" title="Restuarant&Bar" class="resimler"  /></a>
+                
+                </div>
+        
+            </div>
+          }
+            <blockquote>&nbsp;</blockquote>
+        </div>
+    </div>
+</div>
+
+}
+
+
+
+            <div class="clear"></div>
+        </div>
+

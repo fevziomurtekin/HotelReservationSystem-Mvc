@@ -1,0 +1,97 @@
+﻿body {
+}
+.resimler{
+    width:400px;
+    height:400px;
+    padding:20px;
+}
+.font{
+    padding-left:10px;
+}
+.IK{
+    padding-left:10px;
+}
+
+.para0 button{
+background-color:royalblue;
+font-size:18px;
+min-width:200px;
+margin-left:10px;
+}
+.para0 input{
+    margin-left:125px;
+}
+.para0 label {
+    margin-left: 220px;
+    font-size:25px;
+}
+.para1 button{
+background-color:royalblue;
+font-size:18px;
+min-width:200px;
+margin-left:10px;
+}
+
+.para1 label {
+    margin-left: 200px;
+    font-size:25px;
+}
+.para1 input {
+    margin-left: 150px;
+}
+   
+.para2 input{
+    margin-left:150px;
+}
+.para3 input{
+    margin-left:135px;
+}
+.para2 button{
+background-color:royalblue;
+font-size:18px;
+min-width:200px;
+margin-left:10px;
+}
+.oda label{
+    margin-left:40px;
+    font-size:25px;
+}
+.oda {
+    font-size:18px;
+}
+
+.para2 label {
+    margin-left: 220px;
+    font-size:25px;
+}
+.para3 button{
+background-color:royalblue;
+font-size:18px;
+min-width:220px;
+margin-left:10px;
+}
+
+.para3 label {
+    margin-left: 180px;
+    font-size:25px;
+}
+.ozet {
+    padding-left:30em;
+}
+.misafirDetay{
+    padding-left:28em;
+
+}
+.misafirDetay text{
+    text-align: center;
+}
+.booking-form button{
+ background-color:royalblue;
+font-size:18px;
+min-width:150px;
+margin-left:15px;
+
+}
+.booking-form{
+   padding-left:5px;
+}

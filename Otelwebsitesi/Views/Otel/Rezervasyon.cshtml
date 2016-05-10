@@ -1,0 +1,95 @@
+﻿
+@model  Otelwebsitesi.Models.rezervasyonumuz
+@{
+    ViewBag.Title = "Rezervasyon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+
+}
+<br />
+
+<div class="booking-main">
+    <h3>Misafir Detayları</h3>
+</div>
+<br />
+<br />
+<div class="ozet">
+    <h2>Bilgilerinizi giriniz</h2>
+   
+</div>
+@using (Html.BeginForm())
+
+{  
+    <div class="container">
+        
+            <h3>Adınız</h3><br />
+            @Html.TextBoxFor(a => a.Ad) <br /><br />
+            <h3>Soyadınız</h3><br />
+            @Html.TextBoxFor(a => a.Soyadı)<br /><br />
+            <h3>Telefon Numaranız</h3><br />
+            (Örneğin; 532-xxx-xx-xx)<br />
+            @Html.TextBoxFor(a => a.TelefonNumarasi)<br /><br />
+            <h3>E-posta adresiniz</h3><br />
+            (örneğin;xxxxx@hotmail.com)<br />
+            @Html.TextBoxFor(a => a.Eposta)<br /><br />
+            <h3>Adresiniz</h3><br />
+            @Html.TextBoxFor(a => a.Adresiniz)<br /><br />
+            <h3>Kalmak istediğiniz odanın katını yazınız.</h3><br />
+            (1 |2 | 3 | 4)<br />
+            @Html.TextBoxFor(a => a.odaKat)<br /><br />
+            <h3>Kalmak istediğiniz odanın türünü yazınız.</h3><br />
+            (İkikişilik | ückisilik | aileodasi | suitodasi)<br />
+            @Html.TextBoxFor(a => a.odaTürü)<br />
+            <h3>Giriş tarihi</h3><br />
+            (Örneğin;xx/xx/xxxx)<br />
+            @Html.TextBoxFor(a => a.giristarihi)<br /><br />
+            <h3>Çıkış tarihi</h3><br />
+             (Örneğin;xx/xx/xxxx)<br />
+            @Html.TextBoxFor(a => a.cikistarihi)<br /><br />
+            <h3>Konaklayacak yetişkin sayısı</h3>
+            @Html.TextBoxFor(a => a.yetiskinsayisi)<br /><br />
+            <button type="submit" onclick="myFunction()"onwaiting=""> tamamla </button>
+               <script>
+            function myFunction() {
+            alert("Rezervasyon işleminiz basarılı");
+            }   
+             </script>
+        
+            <a href="/Otel/rezbilgi">bilgilerinizi görmek için tıklayınız</a>
+      
+     
+</div>
+
+
+}
+   
+    
+
+  
+<!--end-booking-->
+<!---strat-date-piker---->
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script src="js/jquery-ui.js"></script>
+<script>
+										  $(function() {
+											$( "#datepicker,#datepicker1" ).datepicker();
+										  });
+</script>
+<!---/End-date-piker---->
+<link type="text/css" rel="stylesheet" href="css/JFGrid.css" />
+<link type="text/css" rel="stylesheet" href="css/JFFormStyle-1.css" />
+<script type="text/javascript" src="js/JFCore.js"></script>
+<script type="text/javascript" src="js/JFForms.js"></script>
+<!-- Set here the key for your domain in order to hide the watermark on the web server -->
+<script type="text/javascript">
+							(function() {
+								JC.init({
+									domainKey: ''
+								});
+							})();
+</script>   
+
+
+
+

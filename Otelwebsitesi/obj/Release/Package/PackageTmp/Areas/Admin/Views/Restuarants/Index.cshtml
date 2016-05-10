@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Otelwebsitesi.Models.Restuarant>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.restuarantResim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.restuarantBilgi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resim2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resim3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resim4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resim5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resim6)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.restuarantResim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.restuarantBilgi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resim2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resim3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resim4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resim5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resim6)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.restuarantID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.restuarantID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.restuarantID })
+        </td>
+    </tr>
+}
+
+</table>

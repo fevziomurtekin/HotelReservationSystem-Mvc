@@ -1,0 +1,91 @@
+﻿@model Otelwebsitesi.Models.sliderbilgi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>sliderbilgi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sliderfoto1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sliderfoto1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sliderfoto2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sliderfoto2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sliderfoto3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sliderfoto3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sliderfoto4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sliderfoto4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.slidertext1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slidertext1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.slidertext2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slidertext2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.slidertext3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slidertext3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.slidertext4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slidertext4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kategori)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kategori)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sliderbilgiID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

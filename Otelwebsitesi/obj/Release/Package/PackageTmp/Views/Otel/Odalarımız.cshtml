@@ -1,0 +1,184 @@
+﻿
+
+@{
+    ViewBag.Title = "Odalarımız";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="booking-main">
+    <h3>Odalarımız</h3>
+</div>
+<br />
+
+
+<div class="oda">
+    <p>
+        @foreach (var item in ViewBag.odalar)
+        {
+            if (item.odalarID == 1)
+            {
+                <div class="container">
+                    <div class="detailText">
+                        <strong>@item.genelodadetayi</strong>
+                    </div>
+                </div>
+            }
+        }
+
+        <br />
+        <br />
+        @foreach (var slider in ViewBag.slider)
+        {
+            if (slider.kategori == "odalar")
+            {
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="item active">
+                            <div class="container"><img src="~/Content/@slider.sliderfoto1" alt="2kisilik" width="1134" height="400"></div>
+
+
+                        </div>
+
+                        <div class="item">
+                            <div class="container"><img src="~/Content/@slider.sliderfoto2" alt="aileodasi" width="1134" height="400"></div>
+                        </div>
+
+                        <div class="item">
+                            <div class="container"><img src="~/Content/@slider.sliderfoto3" alt="3kisilik" width="1134" height="400"></div>
+
+                        </div>
+
+                        <div class="item">
+                            <div class="container"><img src="~/Content/@slider.sliderfoto4" alt="suitsodasi" width="1134" height="400"></div>
+
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            }
+        }
+        <br />
+        <br />
+
+        <div class="row">
+           @foreach(var oda in ViewBag.odalar)
+           {
+               if (oda.odalarID==1) { 
+          
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img src="~/Content/@oda.odaResim" alt="Generic placeholder thumbnail">
+                </div>
+
+                <div class="caption">
+                    <h3>@oda.basliklar</h3>
+                    @oda.odaBilgi
+                </div>
+
+<p>
+        <a href="#" class="btn btn-primary btn-center" role="button">
+            Rezervasyon
+        </a>
+
+    </p>
+        </div>
+               }
+           }
+@foreach (var oda1 in ViewBag.odalar)
+{
+    if (oda1.odalarID ==5 )
+    {
+
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img src="~/Content/@oda1.odaResim" alt="Generic placeholder thumbnail">
+            </div>
+
+            <div class="caption">
+                <h3>@oda1.basliklar</h3>
+                @oda1.odaBilgi
+            </div>
+
+            <p>
+                <a href="#" class="btn btn-primary btn-center" role="button">
+                    Rezervasyon
+                </a>
+
+            </p>
+        </div>
+    }
+}
+
+@foreach (var oda2 in ViewBag.odalar)
+{
+    if (oda2.odalarID == 9)
+    {
+
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img src="~/Content/@oda2.odaResim" alt="Generic placeholder thumbnail">
+            </div>
+
+            <div class="caption">
+                <h3>@oda2.basliklar</h3>
+                @oda2.odaBilgi
+            </div>
+
+            <p>
+                <a href="#" class="btn btn-primary btn-center" role="button">
+                    Rezervasyon
+                </a>
+
+            </p>
+        </div>
+    }
+}
+
+@foreach (var oda3 in ViewBag.odalar)
+{
+    if (oda3.odalarID == 13)
+    {
+
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img src="~/Content/@oda3.odaResim" alt="Generic placeholder thumbnail">
+            </div>
+
+            <div class="caption">
+                <h3>@oda3.basliklar</h3>
+                @oda3.odaBilgi
+            </div>
+
+            <p>
+                <a href="#" class="btn btn-primary btn-center" role="button">
+                    Rezervasyon
+                </a>
+
+            </p>
+        </div>
+    }
+}
+
+        </div>
+    </div>
+        
+

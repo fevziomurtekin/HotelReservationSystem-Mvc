@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Otelwebsitesi.Models.restuarantdetay>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.restuaranddetayBilgi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Restuarant.restuarantResim)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.restuaranddetayBilgi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Restuarant.restuarantResim)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.restuarantdetayID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.restuarantdetayID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.restuarantdetayID })
+        </td>
+    </tr>
+}
+
+</table>

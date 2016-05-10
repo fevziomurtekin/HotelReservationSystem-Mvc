@@ -1,0 +1,75 @@
+﻿@model Otelwebsitesi.Models.Salonlar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Admin/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Salonlar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.salonResmi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonResmi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonBilgi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonBilgi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonBaslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonBaslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonbilgisatiri1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonbilgisatiri1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonbilgisatiri2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonbilgisatiri2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonbilgisatiri3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonbilgisatiri3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonbilgisatiri4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonbilgisatiri4)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.salonlarID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

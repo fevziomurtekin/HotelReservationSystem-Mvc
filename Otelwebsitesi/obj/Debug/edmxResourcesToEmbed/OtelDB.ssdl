@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OtelDBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="OtelDBModelStoreContainer">
+    <EntitySet Name="admin" EntityType="OtelDBModel.Store.admin" store:Type="Tables" />
+    <EntitySet Name="hakkimizda" EntityType="OtelDBModel.Store.hakkimizda" store:Type="Tables" />
+    <EntitySet Name="insankaynaklari" EntityType="OtelDBModel.Store.insankaynaklari" store:Type="Tables" />
+    <EntitySet Name="insankaynaklaridetay" EntityType="OtelDBModel.Store.insankaynaklaridetay" store:Type="Tables" />
+    <EntitySet Name="odalardetay" EntityType="OtelDBModel.Store.odalardetay" store:Type="Tables" />
+    <EntitySet Name="odalarımız" EntityType="OtelDBModel.Store.odalarımız" store:Type="Tables" />
+    <EntitySet Name="Restuarant" EntityType="OtelDBModel.Store.Restuarant" store:Type="Tables" />
+    <EntitySet Name="restuarantdetay" EntityType="OtelDBModel.Store.restuarantdetay" store:Type="Tables" />
+    <EntitySet Name="rezervasyonumuz" EntityType="OtelDBModel.Store.rezervasyonumuz" store:Type="Tables" />
+    <EntitySet Name="Salonlar" EntityType="OtelDBModel.Store.Salonlar" store:Type="Tables" />
+    <EntitySet Name="salonlarimizdetay" EntityType="OtelDBModel.Store.salonlarimizdetay" store:Type="Tables" />
+    <EntitySet Name="sliderbilgi" EntityType="OtelDBModel.Store.sliderbilgi" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="OtelDBModel.Store.sysdiagrams" store:Type="Tables" />
+    <EntitySet Name="Uye" EntityType="OtelDBModel.Store.Uye" store:Type="Tables" />
+    <AssociationSet Name="FK_insankaynaklari_insankaynaklaridetay" Association="OtelDBModel.Store.FK_insankaynaklari_insankaynaklaridetay">
+      <End Role="insankaynaklaridetay" EntitySet="insankaynaklaridetay" />
+      <End Role="insankaynaklari" EntitySet="insankaynaklari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_odalardetay_odalarımız" Association="OtelDBModel.Store.FK_odalardetay_odalarımız">
+      <End Role="odalarımız" EntitySet="odalarımız" />
+      <End Role="odalardetay" EntitySet="odalardetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_restuarantdetay_Restuarant1" Association="OtelDBModel.Store.FK_restuarantdetay_Restuarant1">
+      <End Role="Restuarant" EntitySet="Restuarant" />
+      <End Role="restuarantdetay" EntitySet="restuarantdetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rezervasyonumuz_odalarımız" Association="OtelDBModel.Store.FK_rezervasyonumuz_odalarımız">
+      <End Role="odalarımız" EntitySet="odalarımız" />
+      <End Role="rezervasyonumuz" EntitySet="rezervasyonumuz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rezervasyonumuz_Uye" Association="OtelDBModel.Store.FK_rezervasyonumuz_Uye">
+      <End Role="Uye" EntitySet="Uye" />
+      <End Role="rezervasyonumuz" EntitySet="rezervasyonumuz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_salonlarimizdetay_Salonlar" Association="OtelDBModel.Store.FK_salonlarimizdetay_Salonlar">
+      <End Role="Salonlar" EntitySet="Salonlar" />
+      <End Role="salonlarimizdetay" EntitySet="salonlarimizdetay" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="soyadi" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="k_adi" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="sifre" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="hakkimizda">
+    <Key>
+      <PropertyRef Name="hakkimizdaID" />
+    </Key>
+    <Property Name="hakkimizdaID" Type="int" Nullable="false" />
+    <Property Name="hakkimizdaBilgi" Type="ntext" />
+    <Property Name="hakkimizdaResim" Type="ntext" />
+    <Property Name="hakkimizdaBaslik" Type="ntext" />
+    <Property Name="hakkimizdasatir1" Type="ntext" />
+    <Property Name="hakkimizdasatir2" Type="ntext" />
+    <Property Name="hakkimizdasatir3" Type="ntext" />
+    <Property Name="hakkimizdasatir4" Type="ntext" />
+    <Property Name="hakkimizdasatir5" Type="ntext" />
+    <Property Name="hakkimizdasatir6" Type="ntext" />
+    <Property Name="hakkimizdasatir7" Type="ntext" />
+    <Property Name="hakkimizdasatir8" Type="ntext" />
+    <Property Name="hakkimizdasatir9" Type="ntext" />
+    <Property Name="hakkimizdaBaslik1" Type="ntext" />
+    <Property Name="hakkimizdaBilgi1" Type="ntext" />
+    <Property Name="hakkimizdaBilgi2" Type="ntext" />
+    <Property Name="hakkimizdaBaslik2" Type="ntext" />
+    <Property Name="hakkimizdaBaslik3" Type="ntext" />
+    <Property Name="hakkimizdaBilgi3" Type="ntext" />
+    <Property Name="hakkimizdaBaslik4" Type="ntext" />
+    <Property Name="hakkimizdaBilgi4" Type="ntext" />
+    <Property Name="hakkimizdaBaslik5" Type="ntext" />
+    <Property Name="hakkimizdaBilgi5" Type="ntext" />
+  </EntityType>
+  <EntityType Name="insankaynaklari">
+    <Key>
+      <PropertyRef Name="ikID" />
+    </Key>
+    <Property Name="ikID" Type="int" Nullable="false" />
+    <Property Name="ikResim" Type="ntext" />
+    <Property Name="ikBaslik" Type="ntext" />
+    <Property Name="ikBaslik1" Type="ntext" />
+    <Property Name="ikBaslik3" Type="nvarchar" MaxLength="50" />
+    <Property Name="ikBaslik4" Type="nvarchar" MaxLength="50" />
+    <Property Name="ikBilgi" Type="ntext" />
+    <Property Name="ikBilgi1" Type="ntext" />
+    <Property Name="ikBilgi2" Type="ntext" />
+    <Property Name="ikBilgi3" Type="ntext" />
+    <Property Name="ikBilgi4" Type="ntext" />
+    <Property Name="ikBilgi5" Type="ntext" />
+    <Property Name="ikBilgi6" Type="ntext" />
+    <Property Name="ikBilgi7" Type="ntext" />
+    <Property Name="ikBilgi8" Type="ntext" />
+    <Property Name="ikBilgi9" Type="ntext" />
+  </EntityType>
+  <EntityType Name="insankaynaklaridetay">
+    <Key>
+      <PropertyRef Name="ikdetayID" />
+    </Key>
+    <Property Name="ikdetayID" Type="int" Nullable="false" />
+    <Property Name="ikdetayBilgi" Type="ntext" Nullable="false" />
+    <Property Name="dil" Type="int" Nullable="false" />
+    <Property Name="ikID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="odalardetay">
+    <Key>
+      <PropertyRef Name="odalardetayID" />
+    </Key>
+    <Property Name="odalardetayID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="odalardetayBilgi" Type="ntext" />
+    <Property Name="dil" Type="int" />
+    <Property Name="odalarID" Type="int" />
+  </EntityType>
+  <EntityType Name="odalarımız">
+    <Key>
+      <PropertyRef Name="odalarID" />
+    </Key>
+    <Property Name="odalarID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="odaTürü" Type="ntext" />
+    <Property Name="odaKat" Type="int" />
+    <Property Name="odaBilgi" Type="ntext" />
+    <Property Name="kalanOdasayisi" Type="int" />
+    <Property Name="odaÜcreti" Type="int" />
+    <Property Name="genelodadetayi" Type="ntext" />
+    <Property Name="odaResim" Type="ntext" />
+    <Property Name="basliklar" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Restuarant">
+    <Key>
+      <PropertyRef Name="restuarantID" />
+    </Key>
+    <Property Name="restuarantID" Type="int" Nullable="false" />
+    <Property Name="restuarantResim" Type="nvarchar" MaxLength="50" />
+    <Property Name="restuarantBilgi" Type="ntext" />
+    <Property Name="resim2" Type="ntext" />
+    <Property Name="resim3" Type="ntext" />
+    <Property Name="resim4" Type="ntext" />
+    <Property Name="resim5" Type="ntext" />
+    <Property Name="resim6" Type="ntext" />
+  </EntityType>
+  <EntityType Name="restuarantdetay">
+    <Key>
+      <PropertyRef Name="restuarantdetayID" />
+    </Key>
+    <Property Name="restuarantdetayID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="restuaranddetayBilgi" Type="ntext" Nullable="false" />
+    <Property Name="dil" Type="int" Nullable="false" />
+    <Property Name="restuarantID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rezervasyonumuz">
+    <Key>
+      <PropertyRef Name="rezervasyonID" />
+    </Key>
+    <Property Name="rezervasyonID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="giristarihi" Type="ntext" />
+    <Property Name="cikistarihi" Type="ntext" />
+    <Property Name="yetiskinsayisi" Type="int" Nullable="false" />
+    <Property Name="Ad" Type="ntext" />
+    <Property Name="Soyadı" Type="ntext" />
+    <Property Name="TelefonNumarasi" Type="int" />
+    <Property Name="Eposta" Type="ntext" />
+    <Property Name="Adresiniz" Type="ntext" />
+    <Property Name="odalarID" Type="int" />
+    <Property Name="uyeID" Type="int" />
+    <Property Name="odaTürü" Type="ntext" />
+    <Property Name="odaKat" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Salonlar">
+    <Key>
+      <PropertyRef Name="salonlarID" />
+    </Key>
+    <Property Name="salonlarID" Type="int" Nullable="false" />
+    <Property Name="salonResmi" Type="nvarchar" MaxLength="50" />
+    <Property Name="salonBilgi" Type="ntext" />
+    <Property Name="salonBaslik" Type="ntext" />
+    <Property Name="salonbilgisatiri1" Type="ntext" />
+    <Property Name="salonbilgisatiri2" Type="ntext" />
+    <Property Name="salonbilgisatiri3" Type="ntext" />
+    <Property Name="salonbilgisatiri4" Type="ntext" />
+  </EntityType>
+  <EntityType Name="salonlarimizdetay">
+    <Key>
+      <PropertyRef Name="salondetayID" />
+    </Key>
+    <Property Name="salondetayID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="salondetayBilgi" Type="ntext" Nullable="false" />
+    <Property Name="dil" Type="int" Nullable="false" />
+    <Property Name="salonlarID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sliderbilgi">
+    <Key>
+      <PropertyRef Name="sliderbilgiID" />
+    </Key>
+    <Property Name="sliderbilgiID" Type="int" Nullable="false" />
+    <Property Name="sliderfoto1" Type="ntext" />
+    <Property Name="sliderfoto2" Type="ntext" />
+    <Property Name="sliderfoto3" Type="ntext" />
+    <Property Name="sliderfoto4" Type="ntext" />
+    <Property Name="slidertext1" Type="ntext" />
+    <Property Name="slidertext2" Type="ntext" />
+    <Property Name="slidertext3" Type="ntext" />
+    <Property Name="slidertext4" Type="ntext" />
+    <Property Name="kategori" Type="ntext" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="image" />
+  </EntityType>
+  <EntityType Name="Uye">
+    <Key>
+      <PropertyRef Name="uyeID" />
+    </Key>
+    <Property Name="uyeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="ntext" />
+    <Property Name="soyadi" Type="ntext" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdminMi" Type="int" />
+  </EntityType>
+  <Association Name="FK_insankaynaklari_insankaynaklaridetay">
+    <End Role="insankaynaklaridetay" Type="OtelDBModel.Store.insankaynaklaridetay" Multiplicity="1" />
+    <End Role="insankaynaklari" Type="OtelDBModel.Store.insankaynaklari" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="insankaynaklaridetay">
+        <PropertyRef Name="ikdetayID" />
+      </Principal>
+      <Dependent Role="insankaynaklari">
+        <PropertyRef Name="ikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_odalardetay_odalarımız">
+    <End Role="odalarımız" Type="OtelDBModel.Store.odalarımız" Multiplicity="0..1" />
+    <End Role="odalardetay" Type="OtelDBModel.Store.odalardetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="odalarımız">
+        <PropertyRef Name="odalarID" />
+      </Principal>
+      <Dependent Role="odalardetay">
+        <PropertyRef Name="odalarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_restuarantdetay_Restuarant1">
+    <End Role="Restuarant" Type="OtelDBModel.Store.Restuarant" Multiplicity="1" />
+    <End Role="restuarantdetay" Type="OtelDBModel.Store.restuarantdetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restuarant">
+        <PropertyRef Name="restuarantID" />
+      </Principal>
+      <Dependent Role="restuarantdetay">
+        <PropertyRef Name="restuarantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rezervasyonumuz_odalarımız">
+    <End Role="odalarımız" Type="OtelDBModel.Store.odalarımız" Multiplicity="0..1" />
+    <End Role="rezervasyonumuz" Type="OtelDBModel.Store.rezervasyonumuz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="odalarımız">
+        <PropertyRef Name="odalarID" />
+      </Principal>
+      <Dependent Role="rezervasyonumuz">
+        <PropertyRef Name="odalarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rezervasyonumuz_Uye">
+    <End Role="Uye" Type="OtelDBModel.Store.Uye" Multiplicity="0..1" />
+    <End Role="rezervasyonumuz" Type="OtelDBModel.Store.rezervasyonumuz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uye">
+        <PropertyRef Name="uyeID" />
+      </Principal>
+      <Dependent Role="rezervasyonumuz">
+        <PropertyRef Name="uyeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_salonlarimizdetay_Salonlar">
+    <End Role="Salonlar" Type="OtelDBModel.Store.Salonlar" Multiplicity="1" />
+    <End Role="salonlarimizdetay" Type="OtelDBModel.Store.salonlarimizdetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salonlar">
+        <PropertyRef Name="salonlarID" />
+      </Principal>
+      <Dependent Role="salonlarimizdetay">
+        <PropertyRef Name="salonlarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

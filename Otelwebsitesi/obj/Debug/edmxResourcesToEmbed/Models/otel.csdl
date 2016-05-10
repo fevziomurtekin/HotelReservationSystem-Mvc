@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="webModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="soyadi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="k_adi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="insankaynaklari">
+    <Key>
+      <PropertyRef Name="ikID" />
+    </Key>
+    <Property Name="ikID" Type="Int32" Nullable="false" />
+    <Property Name="ikResim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ikBilgi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Türü" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="bölüm" Type="Int32" />
+    <NavigationProperty Name="insankaynaklaridetay" Relationship="Self.FK_insankaynaklaridetay_insankaynaklari" FromRole="insankaynaklari" ToRole="insankaynaklaridetay" />
+  </EntityType>
+  <EntityType Name="insankaynaklaridetay">
+    <Key>
+      <PropertyRef Name="ikdetayID" />
+    </Key>
+    <Property Name="ikdetayID" Type="Int32" Nullable="false" />
+    <Property Name="ikdetayBilgi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dil" Type="Int32" Nullable="false" />
+    <Property Name="ikID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="insankaynaklari" Relationship="Self.FK_insankaynaklaridetay_insankaynaklari" FromRole="insankaynaklaridetay" ToRole="insankaynaklari" />
+  </EntityType>
+  <EntityType Name="Kampanya">
+    <Key>
+      <PropertyRef Name="kampanyaID" />
+    </Key>
+    <Property Name="kampanyaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kampanyaResim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="kampanyaBilgi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="kampanyaTürü" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Rezervasyon" Relationship="Self.FK_Rezervasyon_Kampanya1" FromRole="Kampanya" ToRole="Rezervasyon" />
+  </EntityType>
+  <EntityType Name="Odalar">
+    <Key>
+      <PropertyRef Name="odalarID" />
+    </Key>
+    <Property Name="odalarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="odaBilgi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="odaTuru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="odaResimler" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="odaÜcreti" Type="Int32" />
+    <Property Name="kategoriID" Type="Int32" />
+    <Property Name="odaDurum" Type="Int32" />
+    <Property Name="odaKat" Type="Int32" />
+    <Property Name="odalarBölümü" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="odalardetay" Relationship="Self.FK_odalardetay_Odalar" FromRole="Odalar" ToRole="odalardetay" />
+    <NavigationProperty Name="Rezervasyon" Relationship="Self.FK_Rezervasyon_Odalar" FromRole="Odalar" ToRole="Rezervasyon" />
+  </EntityType>
+  <EntityType Name="odalardetay">
+    <Key>
+      <PropertyRef Name="odalardetayID" />
+    </Key>
+    <Property Name="odalardetayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="odalardetayBilgi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dil" Type="Int32" Nullable="false" />
+    <Property Name="odalarID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Odalar" Relationship="Self.FK_odalardetay_Odalar" FromRole="odalardetay" ToRole="Odalar" />
+  </EntityType>
+  <EntityType Name="Restuarant">
+    <Key>
+      <PropertyRef Name="restuarantID" />
+    </Key>
+    <Property Name="restuarantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="restuarantResim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="restuarantBilgi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="restuarantdetay" Relationship="Self.FK_restuarantdetay_Restuarant1" FromRole="Restuarant" ToRole="restuarantdetay" />
+  </EntityType>
+  <EntityType Name="restuarantdetay">
+    <Key>
+      <PropertyRef Name="restuarantdetayID" />
+    </Key>
+    <Property Name="restuarantdetayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="restuaranddetayBilgi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dil" Type="Int32" Nullable="false" />
+    <Property Name="restuarantID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Restuarant" Relationship="Self.FK_restuarantdetay_Restuarant1" FromRole="restuarantdetay" ToRole="Restuarant" />
+  </EntityType>
+  <EntityType Name="Rezervasyon">
+    <Key>
+      <PropertyRef Name="rezervasyonID" />
+    </Key>
+    <Property Name="rezervasyonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="giristarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="cikistarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="yetiskinsayisi" Type="Int32" Nullable="false" />
+    <Property Name="kampanyaID" Type="Int32" />
+    <Property Name="odalarID" Type="Int32" />
+    <NavigationProperty Name="Kampanya" Relationship="Self.FK_Rezervasyon_Kampanya1" FromRole="Rezervasyon" ToRole="Kampanya" />
+    <NavigationProperty Name="Odalar" Relationship="Self.FK_Rezervasyon_Odalar" FromRole="Rezervasyon" ToRole="Odalar" />
+  </EntityType>
+  <EntityType Name="Salonlar">
+    <Key>
+      <PropertyRef Name="salonlarID" />
+    </Key>
+    <Property Name="salonlarID" Type="Int32" Nullable="false" />
+    <Property Name="salonResmi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="salonBilgi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="salonlarimizdetay" Relationship="Self.FK_salonlarimizdetay_Salonlar" FromRole="Salonlar" ToRole="salonlarimizdetay" />
+  </EntityType>
+  <EntityType Name="salonlarimizdetay">
+    <Key>
+      <PropertyRef Name="salondetayID" />
+    </Key>
+    <Property Name="salondetayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="salondetayBilgi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dil" Type="Int32" Nullable="false" />
+    <Property Name="salonlarID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Salonlar" Relationship="Self.FK_salonlarimizdetay_Salonlar" FromRole="salonlarimizdetay" ToRole="Salonlar" />
+  </EntityType>
+  <EntityType Name="sliderbilgi">
+    <Key>
+      <PropertyRef Name="sliderbilgiID" />
+    </Key>
+    <Property Name="sliderbilgiID" Type="Int32" Nullable="false" />
+    <Property Name="sliderfoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="slidertext" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="kategori" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Uye">
+    <Key>
+      <PropertyRef Name="uyeID" />
+    </Key>
+    <Property Name="uyeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_insankaynaklaridetay_insankaynaklari">
+    <End Role="insankaynaklari" Type="Self.insankaynaklari" Multiplicity="1" />
+    <End Role="insankaynaklaridetay" Type="Self.insankaynaklaridetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="insankaynaklari">
+        <PropertyRef Name="ikID" />
+      </Principal>
+      <Dependent Role="insankaynaklaridetay">
+        <PropertyRef Name="ikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervasyon_Kampanya1">
+    <End Role="Kampanya" Type="Self.Kampanya" Multiplicity="0..1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kampanya">
+        <PropertyRef Name="kampanyaID" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="kampanyaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_odalardetay_Odalar">
+    <End Role="Odalar" Type="Self.Odalar" Multiplicity="1" />
+    <End Role="odalardetay" Type="Self.odalardetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Odalar">
+        <PropertyRef Name="odalarID" />
+      </Principal>
+      <Dependent Role="odalardetay">
+        <PropertyRef Name="odalarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervasyon_Odalar">
+    <End Role="Odalar" Type="Self.Odalar" Multiplicity="0..1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Odalar">
+        <PropertyRef Name="odalarID" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="odalarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_restuarantdetay_Restuarant1">
+    <End Role="Restuarant" Type="Self.Restuarant" Multiplicity="1" />
+    <End Role="restuarantdetay" Type="Self.restuarantdetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restuarant">
+        <PropertyRef Name="restuarantID" />
+      </Principal>
+      <Dependent Role="restuarantdetay">
+        <PropertyRef Name="restuarantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_salonlarimizdetay_Salonlar">
+    <End Role="Salonlar" Type="Self.Salonlar" Multiplicity="1" />
+    <End Role="salonlarimizdetay" Type="Self.salonlarimizdetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salonlar">
+        <PropertyRef Name="salonlarID" />
+      </Principal>
+      <Dependent Role="salonlarimizdetay">
+        <PropertyRef Name="salonlarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="webEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admin" EntityType="Self.admin" />
+    <EntitySet Name="insankaynaklari" EntityType="Self.insankaynaklari" />
+    <EntitySet Name="insankaynaklaridetay" EntityType="Self.insankaynaklaridetay" />
+    <EntitySet Name="Kampanya" EntityType="Self.Kampanya" />
+    <EntitySet Name="Odalar" EntityType="Self.Odalar" />
+    <EntitySet Name="odalardetay" EntityType="Self.odalardetay" />
+    <EntitySet Name="Restuarant" EntityType="Self.Restuarant" />
+    <EntitySet Name="restuarantdetay" EntityType="Self.restuarantdetay" />
+    <EntitySet Name="Rezervasyon" EntityType="Self.Rezervasyon" />
+    <EntitySet Name="Salonlar" EntityType="Self.Salonlar" />
+    <EntitySet Name="salonlarimizdetay" EntityType="Self.salonlarimizdetay" />
+    <EntitySet Name="sliderbilgi" EntityType="Self.sliderbilgi" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Uye" EntityType="Self.Uye" />
+    <AssociationSet Name="FK_insankaynaklaridetay_insankaynaklari" Association="Self.FK_insankaynaklaridetay_insankaynaklari">
+      <End Role="insankaynaklari" EntitySet="insankaynaklari" />
+      <End Role="insankaynaklaridetay" EntitySet="insankaynaklaridetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervasyon_Kampanya1" Association="Self.FK_Rezervasyon_Kampanya1">
+      <End Role="Kampanya" EntitySet="Kampanya" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_odalardetay_Odalar" Association="Self.FK_odalardetay_Odalar">
+      <End Role="Odalar" EntitySet="Odalar" />
+      <End Role="odalardetay" EntitySet="odalardetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervasyon_Odalar" Association="Self.FK_Rezervasyon_Odalar">
+      <End Role="Odalar" EntitySet="Odalar" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_restuarantdetay_Restuarant1" Association="Self.FK_restuarantdetay_Restuarant1">
+      <End Role="Restuarant" EntitySet="Restuarant" />
+      <End Role="restuarantdetay" EntitySet="restuarantdetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_salonlarimizdetay_Salonlar" Association="Self.FK_salonlarimizdetay_Salonlar">
+      <End Role="Salonlar" EntitySet="Salonlar" />
+      <End Role="salonlarimizdetay" EntitySet="salonlarimizdetay" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

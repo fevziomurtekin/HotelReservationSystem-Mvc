@@ -1,0 +1,239 @@
+﻿
+@{
+    ViewBag.Title = "Hakkımızda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="about">
+    <div class="container">
+        <div class="about-top">
+            <h3>HAKKIMIZDA</h3>
+            <div class="about-main">
+              
+
+                <div class="col-md-8 about-top-left">
+                    <h4>Hakkımızda Birkaç Söz</h4>
+                @foreach(var ıtem in ViewBag.hakkimizda) {
+                    if (ıtem.hakkimizdaID == 1) { 
+                    <div class="abt-top">
+                        <div class="col-md-5 abt-left">
+                            <img src="~/Content/@ıtem.hakkimizdaResim" width="255" height="200">
+                        </div>
+                        
+                        <div class="col-md-7 abt-right">
+                            <h5>@ıtem.hakkimizdaBaslik</h5>
+                            <p>@ıtem.hakkimizdaBilgi</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    }
+                }  
+                    @foreach (var ıtem1 in ViewBag.hakkimizda)
+                    {
+                        if (ıtem1.hakkimizdaID == 2)
+                        {
+                            <div class="abt-top">
+                                <div class="col-md-5 abt-left">
+                                    <img src="~/Content/@ıtem1.hakkimizdaResim" width="255" height="200">
+                                </div>
+
+                                <div class="col-md-7 abt-right">
+                                    <h5>@ıtem1.hakkimizdaBaslik</h5>
+                                    <p>@ıtem1.hakkimizdaBilgi</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        }
+                    }  
+                </div>
+             @foreach (var liste in ViewBag.hakkimizda)
+             {
+                 if (liste.hakkimizdaID == 3)
+                 {
+                    <div class="col-md-4 about-top-right">
+                        <h4>İlkelerimiz</h4>
+                        <ul>
+                            <li><a href="#">@liste.hakkimizdasatir1</a></li>
+                            <li><a href="#">@liste.hakkimizdasatir2</a></li>
+                            <li><a href="#">@liste.hakkimizdasatir3</a></li>
+                            <li><a href="#">@liste.hakkimizdasatir4</a></li>
+                            <li><a href="#">@liste.hakkimizdasatir5</a></li>
+                            <li><a href="#">@liste.hakkimizdasatir6</a></li>
+                            <li><a href="#">@liste.hakkimizdasatir7</a></li>
+                            <li><a href="#">@liste.hakkimizdasatir8</a></li>
+                            <li><a href="#">@liste.hakkimizdasatir9</a></li>
+
+
+                        </ul>
+                    </div>
+                 }
+
+             }
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-about-->
+<!--start-team-->
+<div class="team">
+    <div class="container">
+        <div class="team-main">
+            <h3>MÜDÜRLERİMİZ</h3>
+            <div class="team-top">
+                @foreach (var mudur in ViewBag.hakkimizda)
+                {
+                    if (mudur.hakkimizdaID == 4)
+                    {
+                <div class="col-md-4 team-top-left">
+                    <img src="~/Content/@mudur.hakkimizdaResim" width="350" height="250">
+                    <div class="t-top">
+                        <h4>@mudur.hakkimizdaBaslik</h4>
+                        <P>@mudur.hakkimizdaBilgi</P>
+                        <ul>
+                            <li><a href="https://www.facebook.com/muharrem.didici?fref=ts"><span class="fb"> </span></a></li>
+                            <li><a href="https://twitter.com/muharremdidici"><span class="twit"> </span></a></li>
+                            <li><a href="#"><span class="google"> </span></a></li>
+                            <li><a href="#"><span class="you"> </span></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                    }
+                }
+                @foreach (var mudur1 in ViewBag.hakkimizda)
+                {
+                    if (mudur1.hakkimizdaID == 5)
+                    {
+                        <div class="col-md-4 team-top-left">
+                            <img src="~/Content/@mudur1.hakkimizdaResim" width="350" height="250">
+                            <div class="t-top">
+                                <h4>@mudur1.hakkimizdaBaslik</h4>
+                                <P>@mudur1.hakkimizdaBilgi</P>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/omur.tekin3"><span class="fb"> </span></a></li>
+                                    <li><a href="https://twitter.com/Omur_Tekin"><span class="twit"> </span></a></li>
+                                    <li><a href="#"><span class="google"> </span></a></li>
+                                    <li><a href="#"><span class="you"> </span></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    }
+                }
+                @foreach (var mudur2 in ViewBag.hakkimizda)
+                {
+                    if (mudur2.hakkimizdaID == 6)
+                    {
+                        <div class="col-md-4 team-top-left">
+                            <img src="~/Content/@mudur2.hakkimizdaResim" width="350" height="250">
+                            <div class="t-top">
+                                <h4>@mudur2.hakkimizdaBaslik</h4>
+                                <P>@mudur2.hakkimizdaBilgi</P>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oguzhanayguun?fref=ts"><span class="fb"> </span></a></li>
+                                    <li><a href="https://twitter.com/oguzhanaygunn"><span class="twit"> </span></a></li>
+                                    <li><a href="#"><span class="google"> </span></a></li>
+                                    <li><a href="#"><span class="you"> </span></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    }
+                }
+               
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-team-->
+<!--start-advantage-->
+@foreach (var avt in ViewBag.hakkimizda)
+{
+    if (avt.hakkimizdaID == 7)
+    { 
+        <div class="advantage">
+    <div class="container">
+    
+  <div class="advantage-main">
+            <h3>AVANTAJLARIMIZ</h3>
+           
+            <div class="advantage-top">
+              
+                <div class="col-md-4 adv-left">
+                    <div class="a-left">
+                        <h4>1.</h4>
+                    </div>
+                    <div class="a-right">
+                        <h4>@avt.hakkimizdaBaslik</h4>
+                        <p>@avt.hakkimizdaBilgi</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+
+             
+                <div class="col-md-4 adv-left">
+                    <div class="a-left">
+                        <h4>2.</h4>
+                    </div>
+                    <div class="a-right">
+                        <h4>@avt.hakkimizdaBaslik1</h4>
+                        <p>@avt.hakkimizdaBilgi1</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 adv-left">
+                    <div class="a-left">
+                        <h4>3.</h4>
+                    </div>
+                    <div class="a-right">
+                        <h4>@avt.hakkimizdaBaslik2</h4>
+                        <p>@avt.hakkimizdaBilgi2</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            
+            <div class="advantage-bottom">
+                <div class="col-md-4 adv-left">
+                    <div class="a-left">
+                        <h4>4.</h4>
+                    </div>
+                    <div class="a-right">
+                        <h4>@avt.hakkimizdaBaslik3</h4>
+                        <p>@avt.hakkimizdaBilgi3</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 adv-left">
+                    <div class="a-left">
+                        <h4>5.</h4>
+                    </div>
+                    <div class="a-right">
+                        <h4>@avt.hakkimizdaBaslik4</h4>
+                        <p>@avt.hakkimizdaBilgi4</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 adv-left">
+                    <div class="a-left">
+                        <h4>6.</h4>
+                    </div>
+                    <div class="a-right">
+                        <h4>@avt.hakkimizdaBaslik5</h4>
+                        <p>@avt.hakkimizdaBilgi5</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+   
+    </div>
+</div>
+
+    }
+}

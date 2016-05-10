@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Otelwebsitesi.Models.sliderbilgi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sliderfoto1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sliderfoto2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sliderfoto3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sliderfoto4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.slidertext1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.slidertext2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.slidertext3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.slidertext4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kategori)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sliderfoto1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sliderfoto2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sliderfoto3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sliderfoto4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.slidertext1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.slidertext2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.slidertext3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.slidertext4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kategori)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.sliderbilgiID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.sliderbilgiID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.sliderbilgiID })
+        </td>
+    </tr>
+}
+
+</table>

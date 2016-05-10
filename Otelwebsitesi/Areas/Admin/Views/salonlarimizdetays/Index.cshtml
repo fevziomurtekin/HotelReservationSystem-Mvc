@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Otelwebsitesi.Models.salonlarimizdetay>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.salondetayBilgi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salonlar.salonResmi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.salondetayBilgi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salonlar.salonResmi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.salondetayID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.salondetayID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.salondetayID })
+        </td>
+    </tr>
+}
+
+</table>

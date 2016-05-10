@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "rezbilgi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+<div class="booking-main">
+    <h3>Misafir Detayları</h3>
+</div>
+<br />
+<br />
+<div class="ozet">
+    <h2>Rezervasyon Bilgileri</h2>
+</div> 
+    <div class="booking-form">
+            @foreach (var item in ViewBag.sorgu)
+            {    <div class="container">
+            <h3>Adınız</h3><br />
+               @item.Ad <br /><br />
+            <h3>Soyadınız</h3><br />
+           @item.Soyadı<br /><br />
+            <h3>Telefon Numaranız</h3><br />
+           @item.TelefonNumarasi<br /><br />
+            <h3>E-posta adresiniz</h3><br />
+          @item.Eposta <br /><br />
+            <h3>Adresiniz</h3><br />
+           @item.Adresiniz<br /><br />
+            <h3>Kalmak istediğiniz odanın katını yazınız.</h3><br />
+                     @item.odaKat<br /><br />
+            <h3>Kalmak istediğiniz odanın türünü yazınız.</h3><br />
+           @item.odaTürü<br /> <br />
+            <h3>Giriş tarihi</h3><br />
+           @item.giristarihi<br /><br />
+            <h3>Çıkış tarihi</h3><br />
+            @item.cikistarihi<br /><br />
+            <h3>Konaklayacak yetişkin sayısı</h3>
+        @item.yetiskinsayisi  <br /><br />
+
+            
+        </div>
+               
+                
+                
+                
+             
+            }
+
+        <!---->
+        <br />
+        <br />
+    </div>
+
+
+
+

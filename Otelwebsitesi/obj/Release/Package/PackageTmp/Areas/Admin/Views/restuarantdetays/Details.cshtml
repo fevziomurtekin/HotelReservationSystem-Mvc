@@ -1,0 +1,43 @@
+﻿@model Otelwebsitesi.Models.restuarantdetay
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>restuarantdetay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.restuaranddetayBilgi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.restuaranddetayBilgi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Restuarant.restuarantResim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Restuarant.restuarantResim)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.restuarantdetayID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

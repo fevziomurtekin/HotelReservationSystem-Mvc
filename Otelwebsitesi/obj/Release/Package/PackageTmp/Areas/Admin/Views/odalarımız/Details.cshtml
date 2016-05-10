@@ -1,0 +1,83 @@
+﻿@model Otelwebsitesi.Models.odalarımız
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>odalarımız</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.odaTürü)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaTürü)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaKat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaKat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaBilgi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaBilgi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kalanOdasayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kalanOdasayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaÜcreti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaÜcreti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genelodadetayi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genelodadetayi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odaResim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odaResim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.basliklar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.basliklar)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.odalarID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

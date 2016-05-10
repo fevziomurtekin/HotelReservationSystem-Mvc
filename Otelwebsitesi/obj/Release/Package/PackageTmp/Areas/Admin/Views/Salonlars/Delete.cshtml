@@ -1,0 +1,81 @@
+﻿@model Otelwebsitesi.Models.Salonlar
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Salonlar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.salonResmi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonResmi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonBilgi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonBilgi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonBaslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonBaslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonbilgisatiri1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonbilgisatiri1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonbilgisatiri2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonbilgisatiri2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonbilgisatiri3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonbilgisatiri3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salonbilgisatiri4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salonbilgisatiri4)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

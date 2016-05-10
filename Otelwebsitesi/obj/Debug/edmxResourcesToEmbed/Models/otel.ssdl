@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="webModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="soyadi" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="k_adi" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="insankaynaklari">
+    <Key>
+      <PropertyRef Name="ikID" />
+    </Key>
+    <Property Name="ikID" Type="int" Nullable="false" />
+    <Property Name="ikResim" Type="nvarchar(max)" />
+    <Property Name="ikBilgi" Type="nvarchar(max)" />
+    <Property Name="Türü" Type="char" MaxLength="10" />
+    <Property Name="bölüm" Type="int" />
+  </EntityType>
+  <EntityType Name="insankaynaklaridetay">
+    <Key>
+      <PropertyRef Name="ikdetayID" />
+    </Key>
+    <Property Name="ikdetayID" Type="int" Nullable="false" />
+    <Property Name="ikdetayBilgi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dil" Type="int" Nullable="false" />
+    <Property Name="ikID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kampanya">
+    <Key>
+      <PropertyRef Name="kampanyaID" />
+    </Key>
+    <Property Name="kampanyaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kampanyaResim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="kampanyaBilgi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="kampanyaTürü" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Odalar">
+    <Key>
+      <PropertyRef Name="odalarID" />
+    </Key>
+    <Property Name="odalarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="odaBilgi" Type="nvarchar(max)" />
+    <Property Name="odaTuru" Type="nvarchar(max)" />
+    <Property Name="odaResimler" Type="nvarchar(max)" />
+    <Property Name="odaÜcreti" Type="int" />
+    <Property Name="kategoriID" Type="int" />
+    <Property Name="odaDurum" Type="int" />
+    <Property Name="odaKat" Type="int" />
+    <Property Name="odalarBölümü" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="odalardetay">
+    <Key>
+      <PropertyRef Name="odalardetayID" />
+    </Key>
+    <Property Name="odalardetayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="odalardetayBilgi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dil" Type="int" Nullable="false" />
+    <Property Name="odalarID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Restuarant">
+    <Key>
+      <PropertyRef Name="restuarantID" />
+    </Key>
+    <Property Name="restuarantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="restuarantResim" Type="nvarchar" MaxLength="50" />
+    <Property Name="restuarantBilgi" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="restuarantdetay">
+    <Key>
+      <PropertyRef Name="restuarantdetayID" />
+    </Key>
+    <Property Name="restuarantdetayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="restuaranddetayBilgi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dil" Type="int" Nullable="false" />
+    <Property Name="restuarantID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rezervasyon">
+    <Key>
+      <PropertyRef Name="rezervasyonID" />
+    </Key>
+    <Property Name="rezervasyonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="giristarihi" Type="date" Nullable="false" />
+    <Property Name="cikistarihi" Type="date" Nullable="false" />
+    <Property Name="yetiskinsayisi" Type="int" Nullable="false" />
+    <Property Name="kampanyaID" Type="int" />
+    <Property Name="odalarID" Type="int" />
+  </EntityType>
+  <EntityType Name="Salonlar">
+    <Key>
+      <PropertyRef Name="salonlarID" />
+    </Key>
+    <Property Name="salonlarID" Type="int" Nullable="false" />
+    <Property Name="salonResmi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="salonBilgi" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="salonlarimizdetay">
+    <Key>
+      <PropertyRef Name="salondetayID" />
+    </Key>
+    <Property Name="salondetayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="salondetayBilgi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dil" Type="int" Nullable="false" />
+    <Property Name="salonlarID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sliderbilgi">
+    <Key>
+      <PropertyRef Name="sliderbilgiID" />
+    </Key>
+    <Property Name="sliderbilgiID" Type="int" Nullable="false" />
+    <Property Name="sliderfoto" Type="nvarchar(max)" />
+    <Property Name="slidertext" Type="nvarchar(max)" />
+    <Property Name="kategori" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Uye">
+    <Key>
+      <PropertyRef Name="uyeID" />
+    </Key>
+    <Property Name="uyeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_insankaynaklaridetay_insankaynaklari">
+    <End Role="insankaynaklari" Type="Self.insankaynaklari" Multiplicity="1" />
+    <End Role="insankaynaklaridetay" Type="Self.insankaynaklaridetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="insankaynaklari">
+        <PropertyRef Name="ikID" />
+      </Principal>
+      <Dependent Role="insankaynaklaridetay">
+        <PropertyRef Name="ikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_odalardetay_Odalar">
+    <End Role="Odalar" Type="Self.Odalar" Multiplicity="1" />
+    <End Role="odalardetay" Type="Self.odalardetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Odalar">
+        <PropertyRef Name="odalarID" />
+      </Principal>
+      <Dependent Role="odalardetay">
+        <PropertyRef Name="odalarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_restuarantdetay_Restuarant1">
+    <End Role="Restuarant" Type="Self.Restuarant" Multiplicity="1" />
+    <End Role="restuarantdetay" Type="Self.restuarantdetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restuarant">
+        <PropertyRef Name="restuarantID" />
+      </Principal>
+      <Dependent Role="restuarantdetay">
+        <PropertyRef Name="restuarantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervasyon_Kampanya1">
+    <End Role="Kampanya" Type="Self.Kampanya" Multiplicity="0..1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kampanya">
+        <PropertyRef Name="kampanyaID" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="kampanyaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervasyon_Odalar">
+    <End Role="Odalar" Type="Self.Odalar" Multiplicity="0..1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Odalar">
+        <PropertyRef Name="odalarID" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="odalarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_salonlarimizdetay_Salonlar">
+    <End Role="Salonlar" Type="Self.Salonlar" Multiplicity="1" />
+    <End Role="salonlarimizdetay" Type="Self.salonlarimizdetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salonlar">
+        <PropertyRef Name="salonlarID" />
+      </Principal>
+      <Dependent Role="salonlarimizdetay">
+        <PropertyRef Name="salonlarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="webModelStoreContainer">
+    <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="insankaynaklari" EntityType="Self.insankaynaklari" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="insankaynaklaridetay" EntityType="Self.insankaynaklaridetay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kampanya" EntityType="Self.Kampanya" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Odalar" EntityType="Self.Odalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="odalardetay" EntityType="Self.odalardetay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Restuarant" EntityType="Self.Restuarant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="restuarantdetay" EntityType="Self.restuarantdetay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rezervasyon" EntityType="Self.Rezervasyon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Salonlar" EntityType="Self.Salonlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="salonlarimizdetay" EntityType="Self.salonlarimizdetay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sliderbilgi" EntityType="Self.sliderbilgi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uye" EntityType="Self.Uye" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_insankaynaklaridetay_insankaynaklari" Association="Self.FK_insankaynaklaridetay_insankaynaklari">
+      <End Role="insankaynaklari" EntitySet="insankaynaklari" />
+      <End Role="insankaynaklaridetay" EntitySet="insankaynaklaridetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_odalardetay_Odalar" Association="Self.FK_odalardetay_Odalar">
+      <End Role="Odalar" EntitySet="Odalar" />
+      <End Role="odalardetay" EntitySet="odalardetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_restuarantdetay_Restuarant1" Association="Self.FK_restuarantdetay_Restuarant1">
+      <End Role="Restuarant" EntitySet="Restuarant" />
+      <End Role="restuarantdetay" EntitySet="restuarantdetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervasyon_Kampanya1" Association="Self.FK_Rezervasyon_Kampanya1">
+      <End Role="Kampanya" EntitySet="Kampanya" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervasyon_Odalar" Association="Self.FK_Rezervasyon_Odalar">
+      <End Role="Odalar" EntitySet="Odalar" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_salonlarimizdetay_Salonlar" Association="Self.FK_salonlarimizdetay_Salonlar">
+      <End Role="Salonlar" EntitySet="Salonlar" />
+      <End Role="salonlarimizdetay" EntitySet="salonlarimizdetay" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

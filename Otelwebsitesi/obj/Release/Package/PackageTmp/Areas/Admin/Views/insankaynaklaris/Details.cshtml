@@ -1,0 +1,147 @@
+﻿@model Otelwebsitesi.Models.insankaynaklari
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>insankaynaklari</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ikResim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikResim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBaslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBaslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBaslik1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBaslik1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBaslik3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBaslik3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBaslik4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBaslik4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi7)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi7)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi8)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi8)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ikBilgi9)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ikBilgi9)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.insankaynaklaridetay.ikdetayBilgi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.insankaynaklaridetay.ikdetayBilgi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ikID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
